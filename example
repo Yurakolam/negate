@@ -1,0 +1,17 @@
+// negate example
+#include <iostream>    
+#include <functional>   
+#include <algorithm>    
+#include <vector> 
+
+int main () {
+  vector<int> vec ={10,-20,30,-40,50}
+  
+  std::transform (vec.begin(), vec.end(), vec.begin(), std::negate<int>());
+  for (auto it = vec.begin(); it!=vec.end(); it++)
+    std::cout << *it << ' ';
+  std::cout << '\n';
+  
+  system("pause");
+  return 0;
+}
